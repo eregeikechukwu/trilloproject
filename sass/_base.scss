@@ -1,0 +1,78 @@
+/*
+COLORS{
+
+    primary:#eb2f64;
+    primary-light:#FF3366;
+    primary-dark:#BA265D;
+
+    GreyLight: #faf9f9;
+    GreyLight2: #f4f2f2;
+    greylight3:#f0eeee;
+    greylight4:#ccc;
+
+    greydark1:#333;
+    greydark2:#777;
+    greydark3:#999;
+}*/
+$bp-largest: 75em;  //1200px
+$bp-large:68.75em;  //1100px
+$bp-medium:56.25em;   //900px
+$bp-small:37.5em;    //600px
+$bp-smallest:31.25em; //500px
+
+:root{
+    --color-primary:#eb2f64;
+    --color-primary-light:#FF3366;
+    --color-primary-dark:#BA265D;
+    
+    --color-GreyLight-1: #faf9f9;
+    --color-GreyLight-2: #f4f2f2;
+    --color-greylight-3:#f0eeee;
+    --color-greylight-4:#ccc;
+
+    --color-greydark-1:#333;
+    --color-greydark-2:#777;
+    --color-greydark-3:#999;
+
+    --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+    --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+
+    --line:1px solid var(--color-GreyLight-2);
+}
+
+  
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;//rem=10px, 10/16=2,5
+
+
+  @media only screen and (max-width:$bp-large){
+    font-size: 50%;
+  }
+
+}
+body{
+    background-image:linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+    background-size: cover;
+    background-repeat: no-repeat;//this line is used to cancle the background-size element that affects the entire page by repeating the same gradient for the body element that defines the background image//
+    min-height: 100vh;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: var(--color-greydark-2);
+    line-height: 1.6rem;
+}
